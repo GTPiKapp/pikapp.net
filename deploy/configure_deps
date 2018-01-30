@@ -1,0 +1,26 @@
+#!/bin/bash
+
+source /home/ubuntu/.bashrc
+
+ENV_FILE='/srv/pikapp-main.env'
+
+if [ -f '/srv/pikapp-main.env' ]; then
+  rm -rf /srv/pikapp-main.env
+fi
+
+if [ -f '/srv/ecosystem.json' ]; then
+  rm -rf /srv/ecosystem.json
+fi
+
+aws s3 cp s3://pikapp-deployments/config/main.env /srv/pikapp-main.env --region us-east-1
+aws s3 cp s3://pikapp-deployments/config/ecosystem.json /srv/ecosystem.json --region us-east-1
+
+cd /srv/pikapp-main
+
+NODE_ENV=production npm install
+
+NODE_ENV=production knex migrate:latest
+
+chmod 777 -R public/
+
+pm2 restart pikapp-main
