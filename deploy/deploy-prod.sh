@@ -1,11 +1,11 @@
 DATE=$(date +%s)
-FILE=pikapp-$DATE.tar.gz
+FILE=pikapp-website-$DATE.tar.gz
 EXCLUDE="./node_modules"
 EXCLUDE2="*.tar.gz"
 EXCLUDE3="./.git"
 EXCLUDE4=".env"
 EXCLUDE5=".env.frontend"
-APPLICATION_NAME=pikapp
+APPLICATION_NAME=pikapp-website
 if [ ! -f ./package.json ]; then
   echo "You must run this script from the project's root directory"
 else
@@ -20,8 +20,8 @@ else
     echo "============================================="
     echo "==== DEPLOYING $FILE ===="
     echo "============================================="
-    aws s3 cp $FILE s3://pikapp-deployments/pikapp/
-    aws deploy create-deployment  --application-name $APPLICATION_NAME --region=us-east-1 --deployment-group-name $APPLICATION_NAME --s3-location bucket=pikapp-deployments,bundleType=tgz,key=pikapp/$FILE
+    aws s3 cp $FILE s3://pikapp-deployments/pikapp-website/
+    aws deploy create-deployment  --application-name $APPLICATION_NAME --region=us-east-1 --deployment-group-name $APPLICATION_NAME --s3-location bucket=pikapp-deployments,bundleType=tgz,key=pikapp-website/$FILE
     echo "\n\n============================================="
     echo "========== CLEANING UP DEPLOYMENT ==========="
     echo "============================================="

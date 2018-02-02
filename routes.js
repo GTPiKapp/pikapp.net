@@ -1,4 +1,3 @@
-const auth = require('./helpers/authentication');
 
 module.exports = (app, controllers) => {
 	app.get('/status', (req, res) => res.sendStatus(200));
@@ -6,5 +5,5 @@ module.exports = (app, controllers) => {
 	/**
 	 * React routes
 	 */
-	app.get('/*', auth.checkAuth, (req, res) => res.sendFile(__dirname + '/public/app.html'));
+	app.get('/*', (req, res) => res.sendFile(__dirname + '/public/app.html'));
 }

@@ -1,0 +1,45 @@
+import React from 'react';
+
+import {Row, Col, Card} from 'antd';
+const {Meta} = Card;
+
+import Helmet from 'react-helmet';
+
+import PageTitle from '../components/PageTitle';
+
+import newsletters from '../static/newsletters';
+
+const Newsletters = props => {
+	return (
+		<div>
+			<Helmet>
+				<title>Pi Kappa Phi | Alumni Newsletters</title>
+			</Helmet>
+			<PageTitle name="Alumni Newsletters"/>
+			<Row type="flex" justify="center">
+				<Col xs={24} sm={20} md={14}>
+					<Row type="flex" justify="space-around">
+						{newsletters.reverse().map(e => {
+							return (
+								<Col xs={24} sm={12} md={8} lg={5} key={e.name}>
+									<a href={e.link} title={e.name} target="_blank">
+										<Card
+											hoverable={true}
+											cover={<img alt="PDF Download" src="/images/pdf.png" style={{margin: 20, width:'50%', height: 'auto', marginLeft: 'auto', marginRight: 'auto'}} />}>
+											<Meta
+												title={e.name}
+												description='Download this newsletter'>
+											</Meta>
+										</Card>
+									</a>
+								</Col>
+							);
+						})}
+					</Row>
+				</Col>
+			</Row>
+		</div>
+	);
+}
+
+export default Newsletters;
