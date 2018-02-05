@@ -12,6 +12,7 @@ class Image extends Component {
 		}
 
 		this.state = {
+			preload: false,
 			loadedPreloader: false,
 			loadedFullsize: false,
 			src: `/images/${props.src}`,
@@ -31,22 +32,24 @@ class Image extends Component {
 	}
 
 	render() {
-		const {loadedFullsize, src, title, caption} = this.state;
+		const {loadedFullsize, src, title, caption, preload} = this.state;
 		const {src: rawSrc} = this.props;
 		return (
 			<div>
-				<img
-					className="preloadCover"
-					src={`${PRELOAD_DIRECTORY}${rawSrc}`}
-					title={`${title} loading`}
-					style={{float: 'left', height: 'auto', opacity: !loadedFullsize ? 1 : 0}}
-					onLoad={this.preloaderLoaded}
-				/>
-				{this.preloaderLoaded &&
+				{preload &&
+					<img
+						className="preloadCover"
+						src={`${PRELOAD_DIRECTORY}${rawSrc}`}
+						title={`${title} loading`}
+						style={{float: 'left', height: 'auto', opacity: !loadedFullsize ? 1 : 0}}
+						onLoad={this.preloaderLoaded}
+					/>
+				}
+				{(this.preloaderLoaded || !preload) &&
 				<img
 					src={src}
 					alt={title}
-					style={{width: '100%', height: 'auto', opacity: !loadedFullsize ? 0 : 1}}
+					style={{width: '100%', height: 'auto', opacity: (!loadedFullsize && preload) ? 0 : 1}}
 					onLoad={this.fullImageLoaded}
 				/>
 				}

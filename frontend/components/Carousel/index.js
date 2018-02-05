@@ -19,7 +19,7 @@ const imageData = [
 	{
 		title: 'Pi Kappa Phi',
 		description: 'Iota Chapter',
-		src: '/images/carousel/slide_3.jpg',
+		src: '/images/carousel/slide_2.jpg',
 		animation: null
 	},
 	{
@@ -29,13 +29,17 @@ const imageData = [
 			link: '/about/involvement',
 			title: 'Learn More'
 		},
-		src: '/images/carousel/slide_2.jpg',
+		src: '/images/carousel/slide_3.jpg',
+		animation: null
+	},
+	{
+		src: '/images/carousel/slide_4.jpg',
 		animation: null
 	},
 ];
 
-const transitionDuration = 350;
-const duration = 4000000;
+const transitionDuration = 600;
+const duration = 4000;
 
 class Carousel extends Component {
 	constructor(props) {
@@ -102,7 +106,7 @@ class Carousel extends Component {
 					className="slider-wrapper"
 					style={{
 						transform: `translateX(${translateValue}px)`,
-						transition: 'transform ease-out 2s'
+						transition: `transform ease-out ${transitionDuration}ms`
 					}}>
 					{this.renderSlides()}
 				</div>

@@ -1,26 +1,30 @@
 #!/bin/bash
 
+APPLICATION_NAME=pikapp-web
+
 source /home/ubuntu/.bashrc
 
-ENV_FILE='/srv/pikapp-main.env'
-
-if [ -f '/srv/pikapp-main.env' ]; then
-  rm -rf /srv/pikapp-main.env
+if [ -f '/srv/pikapp-web/.env' ]; then
+  rm -rf /srv/pikapp-web/.env
 fi
 
 if [ -f '/srv/ecosystem.json' ]; then
   rm -rf /srv/ecosystem.json
 fi
 
-aws s3 cp s3://pikapp-deployments/config/main.env /srv/pikapp-main.env --region us-east-1
+aws s3 cp s3://pikapp-deployments/config/web.env /srv/pikapp-web/.env --region us-east-1 # Copy web.env -> .env
 aws s3 cp s3://pikapp-deployments/config/ecosystem.json /srv/ecosystem.json --region us-east-1
 
-cd /srv/pikapp-main
+cd /srv/pikapp-web/
 
-NODE_ENV=production npm install
+npm install
 
-NODE_ENV=production knex migrate:latest
+cd /srv/
 
-chmod 777 -R public/
+aws s3 cp s3://pikapp-deployments/config/slack.env /srv/slack.env
+SLACK_HOOK=$(grep SLACK_DEPLOYMENT_HOOK '/srv/slack.env' | awk '{ print $2 }')
+curl --silent --output /dev/null -X POST -H 'Content-type: application/json' --data "{\"text\":\"*$APPLICATION_NAME* has finished deploying\"}" $SLACK_HOOK
+rm '/srv/slack.env'
 
-pm2 restart pikapp-main
+pm2 start /srv/ecosystem.json
+

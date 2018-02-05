@@ -11,6 +11,8 @@ import AtAGlance from '../components/AtAGlance';
 import RushVideo from '../components/RushVideo';
 import Carousel from '../components/Carousel/';
 
+import Image from '../components/Image';
+
 class Homepage extends Component {
 	constructor(props) {
 		super(props);
@@ -24,7 +26,7 @@ class Homepage extends Component {
 				<Helmet>
 					<title>Pi Kappa Phi | IOTA</title>
 				</Helmet>
-
+				<Carousel />
 				<Leaders />
 				<Class />
 				<AtAGlance />

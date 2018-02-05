@@ -3,5 +3,5 @@
 source /home/ubuntu/.bashrc
 
 cd /srv/
-chown -R ubuntu:ubuntu pikapp-main
-chmod 777 -R pikapp-main/
+chown -R ubuntu:ubuntu pikapp-web
+chmod 777 -R pikapp-web/

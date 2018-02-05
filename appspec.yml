@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /srv/pikapp-web
+hooks:
+  AfterInstall:
+    - location: deploy/install_deps
+      runas: root
+  ApplicationStart:
+    - location: deploy/configure_deps
+      runas: ubuntu

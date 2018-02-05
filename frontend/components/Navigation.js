@@ -22,11 +22,17 @@ class Navigation extends Component {
 	}
 
 	navigationLinkClick(e) {
-		if (e.key === 'logo') return this.setState({current: 'index'});
+		if (e.key) {
+			if (e.key === 'logo') return this.setState({current: 'index'});
 
-		this.setState({
-			current: e.key,
-		});
+			this.setState({
+				current: e.key,
+			});
+		} else {
+			this.setState({
+				current: e.target.id,
+			});
+		}
 	}
 
 	render() {
@@ -44,18 +50,19 @@ class Navigation extends Component {
 				<Item key="contact" style={{paddingTop: '10px', paddingBottom: '10px', float: 'right'}}>
 					<Link to="/contact">Contact Us</Link>
 				</Item>
-				<SubMenu title={(<Link to="/alumni" style={{color: 'rgba(0, 0, 0, 0.65)'}}>Alumni</Link>)} style={{paddingTop: '10px', paddingBottom: '10px', float: 'right'}}>
+				{/*
+				<SubMenu title={(<Link id="alumni" onClick={this.navigationLinkClick} to="/alumni" style={{color: 'rgba(0, 0, 0, 0.65)', display: 'block', height: '100%'}}>Alumni</Link>)} style={{paddingTop: '10px', paddingBottom: '10px', float: 'right'}}>
 					<Item key="alumni/update">
 						<Link to="/alumni/update">Update Information</Link>
 					</Item>
-					{/*<Item key="notable">
+					<Item key="notable">
 						<Link to="/alumni/notable">Notable Alumni</Link>
-					</Item>*/}
+					</Item>
 					<Item key="alumni/newsletters">
 						<Link to="/alumni/newsletters">Newsletters</Link>
 					</Item>
-				</SubMenu>
-				<SubMenu title={(<Link to="/house" style={{color: 'rgba(0, 0, 0, 0.65)'}}>House</Link>)} style={{paddingTop: '10px', paddingBottom: '10px', float: 'right'}}>
+				</SubMenu>*/}
+				<SubMenu title={(<Link id="house" onClick={this.navigationLinkClick} to="/house" style={{color: 'rgba(0, 0, 0, 0.65)', display: 'block', height: '100%'}}>House</Link>)} style={{paddingTop: '10px', paddingBottom: '10px', float: 'right'}}>
 					<Item key="house">
 						<Link to="/house">Our House</Link>
 					</Item>
@@ -63,7 +70,7 @@ class Navigation extends Component {
 						<Link to="/house/dining">Dining</Link>
 					</Item>
 				</SubMenu>
-				<SubMenu title={(<Link to="/about" style={{color: 'rgba(0, 0, 0, 0.65)'}}>About</Link>)} style={{paddingTop: '10px', paddingBottom: '10px', float: 'right'}}>
+				<SubMenu title={(<Link id="about" onClick={this.navigationLinkClick} to="/about" style={{color: 'rgba(0, 0, 0, 0.65)', display: 'block', height: '100%'}}>About</Link>)} style={{paddingTop: '10px', paddingBottom: '10px', float: 'right'}}>
 					<Item key="about">
 						<Link to="/about">Our Chapter</Link>
 					</Item>

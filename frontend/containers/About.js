@@ -51,7 +51,7 @@ const Missing = props => {
 						</Col>
 						<Col sm={24} md={10}>
 							<Card>
-								<Image src="pikapps_winter.jpg" title="Brothers volunteering at an Ability Weekned" caption="Brothers volunteering at an Ability Weekned" />
+								<Image src="pikapps_winter.jpg" title="Brothers enjoying the winter weather" />
 							</Card>
 						</Col>
 					</Row>

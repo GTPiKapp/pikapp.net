@@ -43,7 +43,7 @@ app.use(flash());
 app.use(express.static(path.join(__dirname, 'public')));
 
 require('./routes')(app, {
-	index: require('./controllers/index')
+	api: require('./controllers/api')
 });
 
 module.exports = app;

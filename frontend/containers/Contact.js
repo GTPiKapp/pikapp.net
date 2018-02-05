@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 
 import Helmet from 'react-helmet';
 
-import {Row, Col, Card, Button, Form, Input} from 'antd';
+import {Row, Col, message, Card, Button, Form, Input} from 'antd';
 const FormItem = Form.Item;
 const TextArea = Input.TextArea;
 
@@ -12,7 +12,8 @@ class Contact extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			formLoading: false
+			formLoading: false,
+			formDisabled: false
 		};
 		this.formSubmission = this.formSubmission.bind(this);
 	}
@@ -20,6 +21,30 @@ class Contact extends Component {
 	formSubmission(e) {
 		e.preventDefault();
 		this.setState({formLoading: true});
+		this.props.form.validateFields((err, values) => {
+			if (!err) {
+				console.log('Received values of form: ', values);
+			}
+
+			fetch(`/api/contact`, {
+				credentials: 'same-origin',
+				method: 'POST',
+				headers: {
+					'Accept': 'application/json',
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					name: values.name,
+					email: values.email,
+					message: values.message
+				})
+			})
+			.then(response => response.json())
+			.then(json => {
+				this.setState({formDisabled: true, formLoading: false});
+				message.success(json.message);
+			});
+		});
 	}
 
 	render() {
@@ -39,7 +64,7 @@ class Contact extends Component {
 		};
 
 		const { getFieldDecorator } = this.props.form;
-		const {formLoading} = this.state;
+		const { formLoading, formDisabled } = this.state;
 		return (
 			<div>
 				<Helmet>
@@ -56,7 +81,7 @@ class Contact extends Component {
 											required: true, message: 'Please enter your name!',
 										}],
 									})(
-										<Input placeholder="George Burdell" />
+										<Input disabled={formLoading || formDisabled} placeholder="George Burdell" />
 									)}
 								</FormItem>
 								<FormItem {...formItemLayout} label="Email">
@@ -67,7 +92,7 @@ class Contact extends Component {
 											required: true, message: 'Please enter your email!',
 										}],
 									})(
-										<Input placeholder="gburdell3@gatech.edu" />
+										<Input disabled={formLoading || formDisabled} placeholder="gburdell3@gatech.edu" />
 									)}
 								</FormItem>
 								<FormItem {...formItemLayout} label="Message">
@@ -76,10 +101,10 @@ class Contact extends Component {
 											required: true, message: 'Please enter your message!',
 										}],
 									})(
-										<TextArea autosize={{minRows: 4, maxRows: 8}} placeholder="Enter your message here"/>
+										<TextArea disabled={formLoading || formDisabled} autosize={{minRows: 4, maxRows: 8}} placeholder="Enter your message here"/>
 									)}
 								</FormItem>
-							    <Button type="primary" loading={formLoading} onClick={this.formSubmission} htmlType="submit" style={{float: 'right'}}>Submit Form</Button>
+							    <Button type="primary" disabled={formLoading || formDisabled} loading={formLoading} onClick={this.formSubmission} htmlType="submit" style={{float: 'right'}}>Submit Form</Button>
 							</Form>
 						</Card>
 					</Col>

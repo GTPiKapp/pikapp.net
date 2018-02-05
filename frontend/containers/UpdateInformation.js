@@ -2,17 +2,18 @@ import React, {Component} from 'react'
 
 import Helmet from 'react-helmet';
 
-import {Row, Col, Card, Button, Form, Input, Breadcrumb} from 'antd';
+import {Row, Col, Card, Button, message, Form, Input, Breadcrumb} from 'antd';
 const FormItem = Form.Item;
 const TextArea = Input.TextArea;
 
 import PageTitle from '../components/PageTitle';
 
-class Contact extends Component {
+class UpdateInformation extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			formLoading: false
+			formLoading: false,
+			formDisabled: false
 		};
 		this.formSubmission = this.formSubmission.bind(this);
 	}
@@ -20,6 +21,37 @@ class Contact extends Component {
 	formSubmission(e) {
 		e.preventDefault();
 		this.setState({formLoading: true});
+		this.props.form.validateFields((err, values) => {
+			if (!err) {
+				console.log('Received values of form: ', values);
+			}
+
+			fetch(`/api/alumni/update`, {
+				credentials: 'same-origin',
+				method: 'POST',
+				headers: {
+					'Accept': 'application/json',
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					name: values.name,
+					inumber: values.inumber,
+					email: values.email,
+					phone: values.phone,
+					address: values.address,
+					city: values.city,
+					zip: values.zip
+				})
+			})
+			.then(response => response.json())
+			.then(json => {
+				this.setState({formDisabled: true, formLoading: false});
+				message.success(json.message);
+			})
+			.catch(err => {
+				message.error(json.error);
+			})
+		});
 	}
 
 	render() {
@@ -39,7 +71,7 @@ class Contact extends Component {
 		};
 
 		const { getFieldDecorator } = this.props.form;
-		const {formLoading} = this.state;
+		const { formLoading, formDisabled } = this.state;
 		return (
 			<div>
 				<Helmet>
@@ -57,12 +89,12 @@ class Contact extends Component {
 											required: true, message: 'Please enter your name.',
 										}],
 									})(
-										<Input placeholder="George Burdell" />
+										<Input disabled={formLoading || formDisabled} placeholder="George Burdell" />
 									)}
 								</FormItem>
 								<FormItem {...formItemLayout} label="I-Number">
-									{getFieldDecorator('i-num')(
-										<Input placeholder="I-1654" />
+									{getFieldDecorator('inumber')(
+										<Input disabled={formLoading || formDisabled} placeholder="I-1654" />
 									)}
 								</FormItem>
 								<FormItem {...formItemLayout} label="Email">
@@ -73,7 +105,7 @@ class Contact extends Component {
 											required: true, message: 'Please enter your email.',
 										}],
 									})(
-										<Input placeholder="gburdell3@gatech.edu" />
+										<Input disabled={formLoading || formDisabled} placeholder="gburdell3@gatech.edu" />
 									)}
 								</FormItem>
 								<FormItem {...formItemLayout} label="Phone">
@@ -82,16 +114,16 @@ class Contact extends Component {
 											required: true, message: 'Please enter your phone number.',
 										}],
 									})(
-										<Input placeholder="516-123-1992" />
+										<Input disabled={formLoading || formDisabled} placeholder="516-123-1992" />
 									)}
 								</FormItem>
 								<FormItem {...formItemLayout} label="Address">
-									{getFieldDecorator('street', {
+									{getFieldDecorator('address', {
 										rules: [{
 											required: true, message: 'Please enter your street address.',
 										}],
 									})(
-										<Input placeholder="220 Ferst Drive NW" />
+										<Input disabled={formLoading || formDisabled} placeholder="220 Ferst Drive NW" />
 									)}
 								</FormItem>
 								<FormItem {...formItemLayout} label="City">
@@ -100,7 +132,7 @@ class Contact extends Component {
 											required: true, message: 'Please enter your city.',
 										}],
 									})(
-										<Input placeholder="Atlanta" />
+										<Input disabled={formLoading || formDisabled} placeholder="Atlanta" />
 									)}
 								</FormItem>
 								<FormItem {...formItemLayout} label="Zip Code">
@@ -109,10 +141,10 @@ class Contact extends Component {
 											required: true, message: 'Please enter your zip code.',
 										}],
 									})(
-										<Input placeholder="30318" />
+										<Input disabled={formLoading || formDisabled} placeholder="30318" />
 									)}
 								</FormItem>
-							    <Button type="primary" loading={formLoading} onClick={this.formSubmission} htmlType="submit" style={{float: 'right'}}>Update Information</Button>
+							    <Button type="primary" loading={formLoading} disabled={formLoading || formDisabled} onClick={this.formSubmission} htmlType="submit" style={{float: 'right'}}>Update Information</Button>
 							</Form>
 						</Card>
 					</Col>
@@ -122,4 +154,4 @@ class Contact extends Component {
 	}
 }
 
-export default Form.create()(Contact);
+export default Form.create()(UpdateInformation);
