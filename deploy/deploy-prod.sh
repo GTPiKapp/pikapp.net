@@ -14,6 +14,10 @@ else
     echo "brew install gnu-tar"
   else
     echo "============================================="
+    echo "=========== DESTROYING DEV FILES ==========="
+    echo "============================================="
+    rm ./public/javascripts/*.hot-update.json
+    echo "============================================="
     echo "============== BUILDING [PROD] =============="
     echo "============================================="
     npm run build
