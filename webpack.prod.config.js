@@ -2,6 +2,8 @@
 
 const webpack = require('webpack');
 const path = require('path');
+const Dotenv = require('dotenv-webpack');
+const lessToJs = require('less-vars-to-js');
 
 module.exports = {
     entry: [
@@ -9,7 +11,25 @@ module.exports = {
     ],
     module: {
         rules: [
-            { test: /\.js?$/, loader: 'babel-loader', exclude: /node_modules/, query: { presets: ['es2015', 'react'] } },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'eslint-loader',
+                options: {
+                    configFile: '.eslintrc',
+                    failOnWarning: false,
+                    failOnError: false
+                }
+            },
+            {
+                test: /\.js?$/,
+                loader: 'babel-loader',
+                options: {
+                    presets: ['es2015', 'react'],
+                    plugins: [['import', { libraryName: 'antd', style: true}]]
+                },
+                exclude: /node_modules/,
+            },
             { test: /\.less$/, loader: 'style-loader!css-loader!less-loader' },
             { test: /\.css$/, loader: 'style-loader!css-loader' },
             {test:/\.svg$/,loader:'url-loader',query:{mimetype:'image/svg+xml',name:'./public/css/semantic/themes/default/assets/fonts/icons.svg'}},
@@ -30,6 +50,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     plugins: [
+        new Dotenv({path: './.env.frontend'}),
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),

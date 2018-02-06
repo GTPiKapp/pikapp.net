@@ -22,19 +22,19 @@ const AtAGlance = props => {
 						<p style={{textAlign: 'center'}}>Pi Kappa Phi nationally has over 100,000 members in our alumni network. The Iota chapter of Pi Kappa Phi provides its members with opporunities to excel both in the classroom and out of it.</p>
 					</Col>
 					<Col xs={24} md={{span: 16, offset: 2}}>
-						<Col span={8}>
+						<Col xs={24} sm={8}>
 							<h1 style={{color: 'rgb(0, 85, 150)', fontSize: '3em'}}>
 								<CountUp start={0} end={104} duration={4} />
 							</h1>
 							<h2>Current Chapter<br/>Size</h2>
 						</Col>
-						<Col span={8}>
+						<Col xs={24} sm={8}>
 							<h1 style={{color: 'rgb(0, 85, 150)', fontSize: '3em'}}>
-								<CountUp start={0} end={20} duration={3} />
+								<CountUp start={0} end={29} duration={3} />
 							</h1>
 							<h2>New Members Added<br/>This Year</h2>
 						</Col>
-						<Col span={8}>
+						<Col xs={24} sm={8}>
 							<h1 style={{color: 'rgb(0, 85, 150)', fontSize: '3em'}}>$<CountUp start={0} end={10658} duration={6} /></h1>
 							<h2>Ability Experience<br/>Dollars Raised</h2>
 						</Col>

@@ -3,7 +3,6 @@
 const webpack = require('webpack');
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
-const lessToJs = require('less-vars-to-js');
 
 module.exports = {
     entry: [
@@ -25,14 +24,10 @@ module.exports = {
                 test: /\.js?$/,
                 loader: 'babel-loader',
                 options: {
-                    // cacheDirectory: true
                     presets: ['es2015', 'react'],
                     plugins: [['import', { libraryName: 'antd', style: true}]]
                 },
                 exclude: /node_modules/,
-                // query: {
-                    
-                // }
             },
             { test: /\.less/, loader: 'style-loader!css-loader!less-loader' },
             { test: /\.css/, loader: 'style-loader!css-loader' },

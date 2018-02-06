@@ -13,11 +13,14 @@ if [ -f '/srv/ecosystem.json' ]; then
 fi
 
 aws s3 cp s3://pikapp-deployments/config/web.env /srv/pikapp-web/.env --region us-east-1 # Copy web.env -> .env
+aws s3 cp s3://pikapp-deployments/config/web.env.frontend /srv/pikapp-web/.env.frontend --region us-east-1 # Copy web.env.frontend -> .env
 aws s3 cp s3://pikapp-deployments/config/ecosystem.json /srv/ecosystem.json --region us-east-1
 
 cd /srv/pikapp-web/
 
 npm install
+
+NODE_ENV=production knex migrate:latest
 
 cd /srv/
 

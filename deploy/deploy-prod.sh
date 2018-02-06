@@ -18,6 +18,13 @@ else
     echo "============================================="
     gtar zcvf $FILE --exclude=$EXCLUDE --exclude=$EXCLUDE2 --exclude=$EXCLUDE3 --exclude=$EXCLUDE4 --exclude=$EXCLUDE5 ./
     echo "============================================="
+    echo "============ POSTING SLACK ALERT ============"
+    echo "============================================="
+    aws s3 cp s3://pikapp-deployments/config/slack.env ./
+    SLACK_HOOK=$(grep SLACK_DEPLOYMENT_HOOK './slack.env' | awk '{ print $2 }')
+    curl --silent --output /dev/null -X POST -H 'Content-type: application/json' --data "{\"text\":\"*$APPLICATION_NAME* has requested a deployment\"}" $SLACK_HOOK
+    rm './slack.env'
+    echo "============================================="
     echo "==== DEPLOYING $FILE ===="
     echo "============================================="
     aws s3 cp $FILE s3://pikapp-deployments/pikapp-web/
