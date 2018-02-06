@@ -21,10 +21,10 @@ class OfficerCard extends Component {
 							<p><b>Name: </b> {name}</p>
 							{!hideInformation ? ( 
 							<div>
-								<p><b>Hometown: </b> {hometown}</p>
-								<p><b>Major: </b> {major}</p>
+								{hometown && <p><b>Hometown: </b> {hometown}</p>}
+								{major && <p><b>Major: </b> {major}</p>}
 								<p><b>Email: </b> <a href={`mailto:${position.toLowerCase()}@pikapp.net`} title={`Email the ${position.toLowerCase()}`}>{position.toLowerCase().replace(' ', '')}@pikapp.net</a></p>
-								<p><b>What does PiKapp mean to you?</b><br/><i>{quote}</i></p>
+								{quote && <p><b>What does PiKapp mean to you?</b><br/><i>{quote}</i></p>}
 							</div>
 							) : (
 								<p><b>Email: </b> <a href={`mailto:${email}`} title={`Email ${email}`}>{email}</a></p>

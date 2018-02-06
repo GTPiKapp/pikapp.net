@@ -104,7 +104,7 @@ class Navigation extends Component {
 						onClick={this.navigationLinkClick}
 						selectedKeys={[current]}>
 						<Item key="logo" selected style={{paddingTop: '10px', paddingBottom: '10px'}}>
-							<Link to="/"><img src="/images/CoA.png" height="40"/><span style={{paddingLeft: '10px'}}>Pi Kappa Phi – Georgia Tech</span></Link>
+							<Link to="/"><img src="/images/CoA.png" height="40"/><span style={{paddingLeft: '10px'}}>Pi Kappa Phi</span></Link>
 						</Item>
 					</Menu>
 				</Col>

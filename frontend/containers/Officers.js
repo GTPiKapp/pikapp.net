@@ -27,7 +27,7 @@ class Officers extends Component {
 							<OfficerCard position="Vice President" name="Ryan J. Trickett" hometown="Cary, NC" image="ryan-j-trickett" major="Mechanical Engineering" quote="To me Pi Kapp means home. Pi Kapp is a place that gives me a family on campus that I can go to for anything. My brothers are there when times get stressful and when I just want to hang out. I know that I will have Pi Kapp as a support system for me during my years at Georgia Tech and for many years after."/>
 						</Row>
 						<Row type="flex" justify="space-around" align="top" style={{marginTop: 20}}>
-							<OfficerCard position="Treasurer" name="Chris T. Hough" hometown="Canton, GA" image="chris-t-hough" major="Electrical Engineering" quote="Proident labore incididunt velit elit occaecat fugiat dolore magna consequat do dolor eiusmod eiusmod ad sed voluptate enim eu deserunt deserunt."/>
+							<OfficerCard position="Treasurer" name="Chris T. Hough" hometown="Canton, GA" image="chris-t-hough" major="Electrical Engineering" />
 							<OfficerCard position="Secretary" name="Tyler H. Zeigler" hometown="Valdosta, GA" image="tyler-h-zeigler" major="Mechanical Engineering" quote="Pi Kapp is my home away from home. These guys are family to me and it’s always fun learning and experiencing life together."/>
 						</Row>
 						<Row type="flex" justify="space-around" align="top" style={{marginTop: 20}}>
