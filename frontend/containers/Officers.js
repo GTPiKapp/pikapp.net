@@ -36,6 +36,10 @@ class Officers extends Component {
 						</Row>
 						<Row type="flex" justify="space-around" align="top" style={{marginTop: 20}}>
 							<OfficerCard position="Chaplain" name="Benjamin B. Frumkin" hometown="Nashville, TN" image="benjamin-b-frumkin" major="Mechanical Engineering" quote="Pi Kapp has not only provided not the strong personal friendships that I desire coming into college, but it has also given me an incredible base from which I can branch out and take part in other organizations on campus."/>
+							<OfficerCard position="Risk Manager" hideEmail name="Lachlan G. Suter" hometown="Melbourne, Australia" image="lachlan-g-suter" major="Mechanical Engineering" quote="My parents and siblings live far away. I find my home and family in Georgia Tech at Pi Kapp. The men around me support my lifestyle and in turn I support theirs. There is a home for everyone at Pi Kapp." />
+						</Row>
+						<Row type="flex" justify="space-around" align="top" style={{marginTop: 20}}>
+							<OfficerCard position="Philanthopy Chair" hideEmail name="Stephen A. Lindeman" hometown="Bufford, GA" image="stephen-a-lindeman" major="Electrical Engineering" />
 							<OfficerCard position="Chapter Advisor" name="Glenn Goorsky" image="glenn-goorsky" hideInformation email="ggoorsky@gmail.com" />
 						</Row>
 					</Col>

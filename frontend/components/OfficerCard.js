@@ -9,7 +9,7 @@ class OfficerCard extends Component {
 	}
 
 	render() {
-		const {email, position, name, image, hometown, major, quote, hideInformation} = this.props;
+		const {email, position, name, image, hometown, major, quote, hideInformation, hideEmail} = this.props;
 		return (
 			<Col xs={24} md={11}>
 				<Card title={position}>
@@ -23,7 +23,7 @@ class OfficerCard extends Component {
 							<div>
 								{hometown && <p><b>Hometown: </b> {hometown}</p>}
 								{major && <p><b>Major: </b> {major}</p>}
-								<p><b>Email: </b> <a href={`mailto:${position.toLowerCase()}@pikapp.net`} title={`Email the ${position.toLowerCase()}`}>{position.toLowerCase().replace(' ', '')}@pikapp.net</a></p>
+								{!hideEmail && <p><b>Email: </b> <a href={`mailto:${position.toLowerCase()}@pikapp.net`} title={`Email the ${position.toLowerCase()}`}>{position.toLowerCase().replace(' ', '')}@pikapp.net</a></p>}
 								{quote && <p><b>What does PiKapp mean to you?</b><br/><i>{quote}</i></p>}
 							</div>
 							) : (
