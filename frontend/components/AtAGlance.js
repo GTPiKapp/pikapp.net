@@ -19,7 +19,7 @@ const AtAGlance = props => {
 				<Col xs={24} sm={20} md={14}>
 					<Col xs={24} md={6}>
 						<h2 style={{color: 'rgb(0, 85, 150)',textAlign: 'center'}}>Iota Chapter</h2>
-						<p style={{textAlign: 'center'}}>Pi Kappa Phi nationally has over 100,000 members in our alumni network. The Iota chapter of Pi Kappa Phi provides its members with opporunities to excel both in the classroom and out of it.</p>
+						<p style={{textAlign: 'center'}}>Pi Kappa Phi nationally has over 100,000 members in our alumni network. The Iota chapter of Pi Kappa Phi provides its members with opportunities to excel both in the classroom and out of it.</p>
 					</Col>
 					<Col xs={24} md={{span: 16, offset: 2}}>
 						<Col xs={24} sm={8}>
