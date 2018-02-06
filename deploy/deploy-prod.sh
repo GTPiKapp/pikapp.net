@@ -14,6 +14,10 @@ else
     echo "brew install gnu-tar"
   else
     echo "============================================="
+    echo "============== BUILDING [PROD] =============="
+    echo "============================================="
+    npm run build
+    echo "============================================="
     echo "==== PACKAGING $FILE ===="
     echo "============================================="
     gtar zcvf $FILE --exclude=$EXCLUDE --exclude=$EXCLUDE2 --exclude=$EXCLUDE3 --exclude=$EXCLUDE4 --exclude=$EXCLUDE5 ./
