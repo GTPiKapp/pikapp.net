@@ -9,7 +9,7 @@ import Leaders from '../components/Leaders';
 import Class from '../components/Class';
 import AtAGlance from '../components/AtAGlance';
 import RushVideo from '../components/RushVideo';
-import Carousel from '../components/Carousel/';
+import Carousel from '../components/Carousel.js';
 
 import Image from '../components/Image';
 

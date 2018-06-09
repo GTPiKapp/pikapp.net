@@ -30,8 +30,17 @@ module.exports = {
                 },
                 exclude: /node_modules/,
             },
-            { test: /\.less$/, loader: 'style-loader!css-loader!less-loader' },
-            { test: /\.css$/, loader: 'style-loader!css-loader' },
+            {
+                test: /\.less/,
+                use: [{
+                    loader: "style-loader" // creates style nodes from JS strings
+                }, {
+                    loader: "css-loader" // translates CSS into CommonJS
+                }, {
+                    loader: "less-loader" // compiles Less to CSS
+                }]
+            },
+            {test: /\.css$/, loader: 'style-loader!css-loader'},
             {test:/\.svg$/,loader:'url-loader',query:{mimetype:'image/svg+xml',name:'./public/css/semantic/themes/default/assets/fonts/icons.svg'}},
             {test:/\.png$/,loader:'url-loader',query:{mimetype:'image/png',name:'./public/css/semantic/themes/default/assets/images/flags.png'}},
             {test:/\.woff$/,loader:'url-loader',query:{mimetype:'application/font-woff',name:'./public/css/semantic/themes/default/assets/fonts/icons.woff'}},
