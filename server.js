@@ -5,7 +5,6 @@ const flash = require('express-flash');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-const hbs = require('hbs');
 const bookshelf = require('bookshelf');
 
 const app = express();
@@ -30,10 +29,6 @@ app.use(session({
 		ttl: 3600
 	})
 }));
-
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
-hbs.registerPartials(__dirname + '/views/partials');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
