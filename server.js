@@ -9,8 +9,7 @@ const bookshelf = require('bookshelf');
 
 const app = express();
 
-const knexfile = require('./knexfile')[process.env.NODE_ENV];
-
+const knexfile = require('./knexfile');
 const knex = require('knex')(knexfile);
 
 bookshelf.DB = require('bookshelf')(knex);
