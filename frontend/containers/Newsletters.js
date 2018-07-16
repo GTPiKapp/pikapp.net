@@ -21,14 +21,15 @@ const Newsletters = props => {
 					<Row type="flex" justify="space-around">
 						{newsletters.reverse().map(e => {
 							return (
-								<Col xs={24} sm={12} md={8} lg={5} key={e.name}>
+								<Col xs={11} sm={11} md={7} lg={7} xl={5} key={e.name}>
 									<a href={e.link} title={e.name} target="_blank">
 										<Card
+											style={{marginBottom: 20}}
 											hoverable={true}
 											cover={<img alt="PDF Download" src="/images/pdf.png" style={{margin: 20, width:'50%', height: 'auto', marginLeft: 'auto', marginRight: 'auto'}} />}>
 											<Meta
 												title={e.name}
-												description='Download this newsletter'>
+												description='Download'>
 											</Meta>
 										</Card>
 									</a>
