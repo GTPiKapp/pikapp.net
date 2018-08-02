@@ -6,6 +6,7 @@ EXCLUDE3="./.git"
 EXCLUDE4=".env"
 EXCLUDE5=".env.frontend"
 APPLICATION_NAME=pikapp-web
+APPLICATION_NAME_SLACK=pikapp-website-api
 if [ ! -f ./package.json ]; then
   echo "You must run this script from the project's root directory"
 else
@@ -18,10 +19,6 @@ else
     echo "============================================="
     rm ./public/javascripts/*.hot-update.json
     echo "============================================="
-    echo "============== BUILDING [PROD] =============="
-    echo "============================================="
-    npm run build
-    echo "============================================="
     echo "==== PACKAGING $FILE ===="
     echo "============================================="
     gtar zcvf $FILE --exclude=$EXCLUDE --exclude=$EXCLUDE2 --exclude=$EXCLUDE3 --exclude=$EXCLUDE4 --exclude=$EXCLUDE5 ./
@@ -30,7 +27,7 @@ else
     echo "============================================="
     aws s3 cp s3://pikapp-deployments/config/slack.env ./
     SLACK_HOOK=$(grep SLACK_DEPLOYMENT_HOOK './slack.env' | awk '{ print $2 }')
-    curl --silent --output /dev/null -X POST -H 'Content-type: application/json' --data "{\"text\":\"*$APPLICATION_NAME* has requested a deployment\"}" $SLACK_HOOK
+    curl --silent --output /dev/null -X POST -H 'Content-type: application/json' --data "{\"text\":\"*$APPLICATION_NAME_SLACK* has requested a deployment\"}" $SLACK_HOOK
     rm './slack.env'
     echo "============================================="
     echo "==== DEPLOYING $FILE ===="
