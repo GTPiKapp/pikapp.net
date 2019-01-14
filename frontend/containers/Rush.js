@@ -67,11 +67,11 @@ const Rush = props => {
 								<b>Receiving a Bid</b>
 								<br />
 								A bid is an official invitation to join a
-								fraternity as an associate member or pledge. If
-								the brothers decide you would be a good fit for
-								the fraternity you will be given a bid. Do not
-								worry about fitting in, be yourself. Generally,
-								the more brothers you meet, the better the
+								fraternity as an associate member. If the
+								brothers decide you would be a good fit for the
+								fraternity you will be given a bid. Do not worry
+								about fitting in, be yourself. Generally, the
+								more brothers you meet, the better the
 								fraternity is able to decide if you would be a
 								good fit. Bids are given out all week, so don’t
 								feel discouraged if you don’t receive one the
@@ -87,33 +87,35 @@ const Rush = props => {
 									bid?
 								</i>
 								<br />
-								No. The pledge period is a time for you to get
-								to know the fraternity and the fraternity to get
-								to know you. Both have the option of ending the
-								pledge period with no further obligation at any
-								time if situations arise.
+								No. The associate member period is a time for
+								you to get to know the fraternity and the
+								fraternity to get to know you. Both have the
+								option of ending the associate member period
+								with no further obligation at any time if
+								situations arise.
 							</p>
 							<p>
-								<i>How long is the pledge process?</i>
+								<i>How long is the associate member process?</i>
 								<br />
 								Eight weeks - During that time, you will learn
 								the history of the fraternity, get to know the
-								brothers and other pledges, and participate in
-								service projects, intramurals, socials, date
-								nights, mixers, and other aspects of fraternity
-								life.
+								brothers and other associate members, and
+								participate in service projects, intramurals,
+								socials, date nights, mixers, and other aspects
+								of fraternity life.
 							</p>
 							<p>
 								<i>Will I get hazed?</i>
 								<br />
 								Absolutely not. Pi Kappa Phi has a strict no
 								hazing policy. None of us were hazed when we
-								pledged and we will not haze you in any way. We
-								find that not hazing helps strengthen the bonds
-								between pledge classes. We do not want any
-								resentment between pledge classes due to hazing,
-								and we find many of our brothers' best friends
-								pledged in different years than themselves.
+								were associate members and we will not haze you
+								in any way. We find that not hazing helps
+								strengthen the bonds between asscoiate member
+								classes. We do not want any resentment between
+								associate member classes due to hazing, and we
+								find many of our brothers' best friends are in
+								different years than themselves.
 							</p>
 							<p>
 								<i>
@@ -125,13 +127,13 @@ const Rush = props => {
 								participate in events with the fraternity, we
 								realize that you are also adjusting to college
 								life at Georgia Tech. You will be expected to
-								attend one pledge education meeting a week as
-								well as have the opportunity to go to other
-								events with the chapter. You will also be able
-								to eat breakfast, lunch, and dinner at the
+								attend one associate member education meeting a
+								week as well as have the opportunity to go to
+								other events with the chapter. You will also be
+								able to eat breakfast, lunch, and dinner at the
 								chapter house, which is a great way of meeting
 								and hanging out with the brothers and your other
-								pledge brothers.
+								associate members.
 							</p>
 							<p>
 								<i>What if I don't have the time?</i>
@@ -141,14 +143,14 @@ const Rush = props => {
 								Fraternity members can offer you help with your
 								classes and will make sure you are studying to
 								get grades equal to your ability. After
-								investing time and effort into you as a pledge,
-								the fraternity is committed to helping you
-								succeed. In addition, the Greek average GPA is
-								higher than the non-Greek GPA, and with older
-								brothers who have already taken the classes you
-								take, finding help is extremely easy and
-								studying with your pledge brothers makes it go
-								by a lot quicker.
+								investing time and effort into you as an
+								associate member, the fraternity is committed to
+								helping you succeed. In addition, the Greek
+								average GPA is higher than the non-Greek GPA,
+								and with older brothers who have already taken
+								the classes you take, finding help is extremely
+								easy and studying with your other associate
+								members makes it go by a lot quicker.
 							</p>
 							<p>
 								<i>How much does it cost to join?</i>
@@ -165,19 +167,20 @@ const Rush = props => {
 								tunnel). Some of your money goes to parties,
 								mixers or socials, and fraternity events. The
 								remaining part of your dues will go towards many
-								activities that you and your fellow pledge
-								brothers will do. After your associate member
-								semester you will become a brother and have the
-								option to live in the house. If you chose to
-								live in the house, your total fraternity dues
-								will be about $800 less than comparable Georgia
-								Tech housing and meal plan. In fact, a semester
-								of full dues, a meal plan, and housing with us
-								at Pi Kappa Phi is still less than just the rent
-								for North Avenue Apartments alone. Please ask
-								any of the brothers for a financial sheet during
-								rush for the most up to date numbers of
-								associate and brother dues.
+								activities that you and your fellow associate
+								member brothers will do. After your associate
+								member semester you will become a brother and
+								have the option to live in the house. If you
+								chose to live in the house, your total
+								fraternity dues will be about $800 less than
+								comparable Georgia Tech housing and meal plan.
+								In fact, a semester of full dues, a meal plan,
+								and housing with us at Pi Kappa Phi is still
+								less than just the rent for North Avenue
+								Apartments alone. Please ask any of the brothers
+								for a financial sheet during rush for the most
+								up to date numbers of associate and brother
+								dues.
 							</p>
 							<p>
 								<i>What should I wear to rush?</i>
@@ -205,7 +208,7 @@ const Rush = props => {
 							</p>
 							<p>Sincerely,</p>
 							<p>
-								Ryan J. Trickett,<br />
+								Shamari X. Davenport,<br />
 								Vice President<br />
 								<a
 									href="mailto:vicepresident@pikapp.net"
