@@ -48,9 +48,9 @@ class Officers extends Component {
 							<OfficerCard
 								position="Treasurer"
 								name="Karan Achtani"
-								hometown="Canton, GA"
+								hometown="Marietta, GA"
 								image="karan-achtani"
-								major="Electrical Engineering"
+								major="Computer Science"
 							/>
 							<OfficerCard
 								position="Secretary"
