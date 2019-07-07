@@ -15,7 +15,7 @@ class OfficerCard extends Component {
 		const createTag = info => {
 			return (
 				<div style={{ display: 'inline-block' }}>
-					<Tag color="#292929">{info}</Tag>
+					<Tag style={{color: '#292929'}} color="rgba(41, 41, 41, 0.09)">{info}</Tag>
 				</div>
 			);
 		};
@@ -57,7 +57,11 @@ class OfficerCard extends Component {
 
 		return (
 			<Col xs={24} md={11}>
-				<Card style={{ height: window.innerHeight / (window.innerWidth < 800 ? 1.8 : 2.3 ) }} title={position}>
+				<Card
+                    style={{ height: window.innerHeight / (window.innerWidth < 800 ? 1.8 : 2.3 ), color: '#292929' }}
+                    title={position}
+                    hoverable
+                >
 					<Row>
 						<Col span={8}>
 							<Image src={`${image}.jpg`} title={name} />

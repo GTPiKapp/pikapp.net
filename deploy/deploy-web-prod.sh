@@ -30,7 +30,7 @@ else
     rm -rf ./public/javascripts/*.js
     rm -rf ./public/javascripts/*.json
 
-    webpack --config webpack.prod.config.js --progress --colors # Bundle the application
+    ./node_modules/.bin/webpack --config webpack.prod.config.js --progress --colors # Bundle the application
 
     aws s3 cp ./public/index.html s3://$S3_BUCKET/index.html
     aws s3 sync ./public/javascripts/. s3://$S3_BUCKET/javascripts/ --exclude ".DS_Store"
