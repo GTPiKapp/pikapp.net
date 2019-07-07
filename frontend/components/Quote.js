@@ -27,15 +27,15 @@ class Quote extends Component {
         const {quote} = this.props;
         const {placement} = this.state;
 
+
         // strip end of string of the following chars
         const blacklist = [' ', ','];
-        let trimmedQuote = quote.slice(0, 172);
+        let trimmedQuote = quote.slice(0, 77);
 
         while (blacklist.includes(trimmedQuote.slice(-1))) {
             trimmedQuote = trimmedQuote.slice(0, -1);
         }
-        const ellipsizedQuote = quote.length > 175 ? trimmedQuote + '...' : quote;
-
+        const ellipsizedQuote = quote.length > 80 ? trimmedQuote + '...' : quote;
         return (
             <Tooltip placement={placement} title={quote} arrowPointAtCenter>
                 <div
@@ -44,7 +44,7 @@ class Quote extends Component {
                         backgroundColor: 'rgba(41, 41, 41, 0.09)',
                         padding: '2px 0px',
                         borderRadius: '10px',
-                        height: window.innerWidth < 800 ? 'auto' : '131px'
+                        height: window.innerWidth < 1200 ? '110px' : '70px'
                     }}
                     ref={this.quoteInput}
                 >

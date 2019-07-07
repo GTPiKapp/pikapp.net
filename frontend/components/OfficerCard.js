@@ -21,8 +21,9 @@ class OfficerCard extends Component {
 		};
 		const createInfoRow = (prop, info) => {
 			return (
-				<div style={{ margin: '2% 0' }}>
+				<div className="officer-info" style={{ margin: '2% 0' }}>
 					{createTag(info)}
+					{window.innerWidth < 1200 ? <br/> : null}
 					<span>{prop}</span>
 				</div>
 			);
@@ -44,8 +45,9 @@ class OfficerCard extends Component {
 		};
 		const createEmailInfoRow = (email, hideInfo) => {
 			return (
-				<div style={{ margin: '2% 0', visibility: hideEmail ? 'hidden' : 'visible' }}>
+				<div className="officer-info" style={{ margin: '2% 0' }}>
 					{createTag('Email:')}
+					{window.innerWidth < 1200 ? <br/> : null}
 					{hideInfo ? (
 						<a href={`mailto:${email}`} title={`Email ${email}`}>{email}</a>
 					) : (
@@ -58,7 +60,7 @@ class OfficerCard extends Component {
 		return (
 			<Col xs={24} md={11}>
 				<Card
-                    style={{ height: window.innerHeight / (window.innerWidth < 800 ? 1.8 : 2.3 ), color: '#292929' }}
+                    style={{ height: '35%', color: '#292929' }}
                     title={position}
                     hoverable
                 >
@@ -74,6 +76,7 @@ class OfficerCard extends Component {
 								{major && createInfoRow(major, 'Major:')}
 								{hometown && createInfoRow(hometown, 'Hometown:')}
 								{createHiddenInfoRows([name, !hideEmail, major, hometown])}
+								{window.innerWidth < 1200 ? <br/> : null}
 								{quote &&
 									<div style={{verticalAlign: 'middle'}}>
 										<span><b>What does Pi Kapp mean to you?</b></span>
