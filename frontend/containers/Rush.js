@@ -21,16 +21,16 @@ const Rush = props => {
 						style={{ paddingTop: 20 }}>
 						<Card style={{ width: '100%' }}>
 							<p>
-								<b>Spring 2019 Rush</b>
+								<b>Fall 2019 Rush</b>
 								<br />
 								Rush will take place from{' '}
-								<b>Tuesday, January 15th</b> through{' '}
-								<b>Friday, January 18th</b>. Rush starts at 7pm
-								every night and ends at 10pm. You can visit our
-								house (white house across from the baseball
-								field) anytime you like, and feel free to email
-								our{' '}
-								<a href="/officers" title="Officers">
+								<b>Thursday, August 15th</b> through{' '}
+								<b>Tuesday, August 20th</b>. Rush is from 7pm-11pm
+								Thursday through Saturday, and 7pm-10pm Sunday
+								through Tuesday. You can visit our house (white
+								house across from the baseball field) anytime you
+								like, and feel free to email our{' '}
+								<a href="/about/officers" title="Officers">
 									Vice President Shamari
 								</a>{' '}
 								for questions at any time!
