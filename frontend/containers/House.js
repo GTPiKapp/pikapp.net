@@ -36,7 +36,7 @@ const House = props => {
 							</Card>
 						</Col>
 					</Row>
-					<Row type="flex" justify="space-around" style={{paddingTop: 20}}>
+					{/*<Row type="flex" justify="space-around" style={{paddingTop: 20}}>
 						<Card style={{width: '100%'}}>
 							<HouseMapLocation
 								googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.GOOGLE_MAPS_API}`}
@@ -45,7 +45,7 @@ const House = props => {
 								mapElement={<div style={{ height: `100%` }} />}
 							/>
 						</Card>
-					</Row>
+					</Row>*/}
 				</Col>
 			</Row>
 		</div>

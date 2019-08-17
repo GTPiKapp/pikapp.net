@@ -34,7 +34,7 @@ const imageData = [
 
 const CarouselContainer = () => {
 	return (
-		<Carousel autoplay infinite autoplaySpeed={1500}>
+		<Carousel autoplay infinite autoplaySpeed={5000}>
 			<Slide key={0} data={imageData[0]} />
 			<Slide key={1} data={imageData[1]} />
 			<Slide key={2} data={imageData[2]} />

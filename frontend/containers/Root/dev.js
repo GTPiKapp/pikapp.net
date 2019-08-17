@@ -15,6 +15,7 @@ import House from '../House';
 import Dining from '../Dining';
 import Officers from '../Officers';
 import Rush from '../Rush';
+import Scholarship from "../Scholarship";
 import Contact from '../Contact';
 import About from '../About';
 import ParentMessage from '../ParentMessage';
@@ -43,6 +44,7 @@ export default function Root({ store }) {
 									<Route exact path="/house/dining" component={Dining} />
 									<Route exact path="/contact" component={Contact} />
 									<Route exact path="/rush" component={Rush} />
+									<Route exact path="/scholarship" component={Scholarship} />
 									<Route exact path="/alumni/update" component={UpdateInformation} />
 									<Route exact path="/alumni/notable" component={NotableAlumni} />
 									<Route exact path="/alumni/newsletters" component={Newsletters} />

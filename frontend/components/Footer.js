@@ -25,7 +25,7 @@ const FooterWrap = props => {
 					</Row>
 					<Row style={{borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: 20}}>
 						<Col xs={24} md={8}>
-							<p style={{textAlign: 'left'}}>© 2018 Pi Kappa Phi. All Rights Reserved.</p>
+							<p style={{textAlign: 'left'}}>© 2019 Pi Kappa Phi. All Rights Reserved.</p>
 						</Col>
 						<Col xs={24} md={{span: 8, offset: 8}} style={{textAlign: 'right'}}>
 							<SocialIcons />
