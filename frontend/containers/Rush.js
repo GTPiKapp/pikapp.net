@@ -21,17 +21,16 @@ const Rush = props => {
 						style={{ paddingTop: 20 }}>
 						<Card style={{ width: '100%' }}>
 							<p>
-								<b>Fall 2019 Rush</b>
+								<b>Spring 2021 Rush</b>
 								<br />
 								Rush will take place from{' '}
-								<b>Thursday, August 15th</b> through{' '}
-								<b>Tuesday, August 20th</b>. Rush is from 7pm-11pm
-								Thursday through Saturday, and 7pm-10pm Sunday
-								through Tuesday. You can visit our house (white
+								<b>Tuesday, January 18th</b> through{' '}
+								<b>Friday, January 21st</b>. Rush is from 7pm-11pm
+								Tuesday through Friday. You can visit our house (white
 								house across from the baseball field) anytime you
 								like, and feel free to email our{' '}
 								<a href="/about/officers" title="Officers">
-									Vice President Shamari
+									Vice President Ethan
 								</a>{' '}
 								for questions at any time!
 							</p>
@@ -54,7 +53,7 @@ const Rush = props => {
 								the brothers and see what the Pi Kappa Phi has
 								to offer. Your part in Rush is easy - simply
 								show up to the house and let the brothers take
-								care of the rest. You’ll get some of Chef James'
+								care of the rest. You’ll get some of Chef Robs'
 								great food and talk to great people who are
 								interested in learning about who you are and
 								what you do. We encourage you to come back on
@@ -104,7 +103,7 @@ const Rush = props => {
 								socials, date nights, mixers, and other aspects
 								of fraternity life.
 							</p>
-							<p>
+							/**<p>
 								<i>Will I get hazed?</i>
 								<br />
 								Absolutely not. Pi Kappa Phi has a strict no
@@ -116,7 +115,7 @@ const Rush = props => {
 								associate member classes due to hazing, and we
 								find many of our brothers' best friends are in
 								different years than themselves.
-							</p>
+							</p>**/
 							<p>
 								<i>
 									What is the time commitment associated with
@@ -154,13 +153,13 @@ const Rush = props => {
 							</p>
 							<p>
 								<i>How much does it cost to join?</i>
-								<br />
+								<br />//ROWAN EDIT THIS
 								You will find that the cost associated with
 								joining a fraternity is reasonable. Your
 								associate member semester will cost $990. This
 								might seem like a lot but think about all you
 								are getting. First you get 5 meals per week
-								prepared fresh daily by our chef, James Moore.
+								prepared fresh daily by our chef, Rob <last name>.//ROWAN EDIT THIS
 								Second, you receive tickets to every football
 								game (includes Georgia game) in our section
 								(this year we were first row, right next to the
@@ -208,7 +207,7 @@ const Rush = props => {
 							</p>
 							<p>Sincerely,</p>
 							<p>
-								Shamari X. Davenport,<br />
+								Ethan O. Huston,<br />
 								Vice President<br />
 								<a
 									href="mailto:vicepresident@pikapp.net"
