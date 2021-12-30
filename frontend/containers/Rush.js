@@ -21,11 +21,11 @@ const Rush = props => {
 						style={{ paddingTop: 20 }}>
 						<Card style={{ width: '100%' }}>
 							<p>
-								<b>Spring 2021 Rush</b>
+								<b>Spring 2022 Rush</b>
 								<br />
 								Rush will take place from{' '}
 								<b>Tuesday, January 18th</b> through{' '}
-								<b>Friday, January 21st</b>. Rush is from 7pm-11pm
+								<b>Friday, January 21st</b>. Rush is from 7pm-10pm
 								Tuesday through Friday. You can visit our house (white
 								house across from the baseball field) anytime you
 								like, and feel free to email our{' '}

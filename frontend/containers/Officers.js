@@ -24,18 +24,18 @@ class Officers extends Component {
 						<Row type="flex" justify="space-around" align="top">
 							<OfficerCard
 								position="President"
-								name="Patrick B. Miga"
-								hometown="Lisle, IL"
+								name="Landon J. Schultz"
+								hometown="Canton, GA"
 								image="patrick-miga"
-								major="Aerospace Engineering"
+								major="Industrial Engineering"
 								quote="Pi Kapp has helped me grow into a much better man and has given me the greatest support system I have ever had. While Georgia Tech is an undoubtedly stressful environment, I know my brothers have had my back the entire time and will continue to do so, and for that reason it is easy to avoid the struggles of this school. Pi Kapp has given me so much and has helped me succeed in every aspect of life; I am honored to be able to lead this place and afford the same opportunities to all of my brothers."
 							/>
 							<OfficerCard
 								position="Vice President"
-								name="Shamari X. Davenport"
-								hometown="Duluth, GA"
+								name="Ethan O. Huston"
+								hometown="Marietta, GA"
 								image="shamari-davenport"
-								major="Mechanical Engineering"
+								major="Industrial Engineering"
 								quote="To me Pi Kapp means home. Pi Kapp is a place that gives me a family on campus that I can go to for anything. My brothers are there when times get stressful and when I just want to hang out. I know that I will have Pi Kapp as a support system for me during my years at Georgia Tech and for many years after. Furthermore, as Vice President and Rush Chair of our chapter, I have the ability to make sure we recruit brothers who can help cultivate and better this culture, which I cherish."
 							/>
 						</Row>
@@ -46,16 +46,16 @@ class Officers extends Component {
 							style={{ marginTop: window.innerWidth < 800 ? 0 : 20 }}>
 							<OfficerCard
 								position="Treasurer"
-								name="Karan Achtani"
-								hometown="Marietta, GA"
+								name="Dylan S. Fader"
+								hometown="Alpharetta, GA"
 								image="karan-achtani"
-								major="Computer Science"
+								major="Business Finance"
 								quote="Pi Kapp is a place of true brotherhood. It’s a place where I can be myself and hang out with friends who have a diverse range of interests. We are always there to support and push each other so that each of us can be the best man we can possibly be. It’s truly the best part of my college experience."
 							/>
 							<OfficerCard
 								position="Secretary"
-								name="Michael P. Shelton"
-								hometown="Lilburn, GA"
+								name="Marcus S. Mudano"
+								hometown=", AL"
 								image="michael-shelton"
 								major="Business Administration"
 								quote="Pi Kapp is a place that has changed my life and helped me grow in so many different ways. Making countless memories with this diverse brotherhood has made for a great college experience."
@@ -76,8 +76,8 @@ class Officers extends Component {
 							/>
 							<OfficerCard
 								position="Historian"
-								name="Koosha Z. Kermani"
-								hometown="Johns Creek, GA"
+								name="Nicholas C. Jones"
+								hometown="Rydal, GA"
 								image="koosha-kermani"
 								major="Biology"
 								quote="Being part of Pi Kappa Phi goes beyond just the organization, it means establishing and connecting with a brotherhood that is more important than oneself."
@@ -90,7 +90,7 @@ class Officers extends Component {
 							style={{ marginTop: window.innerWidth < 800 ? 0 : 20 }}>
 							<OfficerCard
 								position="Chaplain"
-								name="Jarod C. Vogt"
+								name="Zachary L. Donald"
 								hometown="Cocoa Beach, FL"
 								image="jarod-vogt"
 								major="Materials Science and Engineering"

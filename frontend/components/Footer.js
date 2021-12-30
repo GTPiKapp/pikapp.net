@@ -18,7 +18,6 @@ const FooterWrap = props => {
 							<p style={{color: '#777', textAlign: 'left'}}>Iota Chapter</p>
 						</Col>
 						<Col span={12} style={{textAlign: 'left', paddingBottom: 20}}>
-							<p style={{color: '#ccc'}}>Tel: 404.347.9256</p>
 							<p style={{color: '#ccc'}}>220 Ferst Drive NW,<br/>Atlanta, GA<br/>30318</p>
 							<Link to="/contact" style={{color: '#ccc'}}>CONTACT US</Link>
 						</Col>

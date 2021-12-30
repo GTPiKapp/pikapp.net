@@ -33,7 +33,7 @@ const House = props => {
 									that dispenses 6 beverages.
 								</p>
 								<p>
-									We are honored to have James Moore as the
+									We are honored to have Robert Grimes as the
 									Head Chef of our dining program. He comes to
 									us from an esteemed background including
 									catering for several US Open Tennis events.
