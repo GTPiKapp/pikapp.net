@@ -93,7 +93,7 @@ const Rush = props => {
 								with no further obligation at any time if
 								situations arise.
 							</p>
-							<p>
+							{/* <p>
 								<i>How long is the associate member process?</i>
 								<br />
 								Eight weeks - During that time, you will learn
@@ -102,7 +102,7 @@ const Rush = props => {
 								participate in service projects, intramurals,
 								socials, date nights, mixers, and other aspects
 								of fraternity life.
-							</p>
+							</p> */}
 							<p>
 								<i>
 									What is the time commitment associated with

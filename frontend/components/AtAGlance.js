@@ -24,13 +24,13 @@ const AtAGlance = props => {
 					<Col xs={24} md={{span: 16, offset: 2}}>
 						<Col xs={24} sm={8}>
 							<h1 style={{color: 'rgb(0, 85, 150)', fontSize: '3em'}}>
-								<CountUp start={0} end={104} duration={4} />
+								<CountUp start={0} end={61} duration={4} />
 							</h1>
 							<h2>Current Chapter<br/>Size</h2>
 						</Col>
 						<Col xs={24} sm={8}>
 							<h1 style={{color: 'rgb(0, 85, 150)', fontSize: '3em'}}>
-								<CountUp start={0} end={29} duration={3} />
+								<CountUp start={0} end={19} duration={3} />
 							</h1>
 							<h2>New Members Added<br/>This Year</h2>
 						</Col>
