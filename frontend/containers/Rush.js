@@ -153,13 +153,13 @@ const Rush = props => {
 							</p>
 							<p>
 								<i>How much does it cost to join?</i>
-								<br />//ROWAN EDIT THIS
+								<br />
 								You will find that the cost associated with
 								joining a fraternity is reasonable. Your
 								associate member semester will cost $990. This
 								might seem like a lot but think about all you
 								are getting. First you get 5 meals per week
-								prepared fresh daily by our chef, Rob <last name>.//ROWAN EDIT THIS
+								prepared fresh daily by our chef, Rob Grimes.
 								Second, you receive tickets to every football
 								game (includes Georgia game) in our section
 								(this year we were first row, right next to the
