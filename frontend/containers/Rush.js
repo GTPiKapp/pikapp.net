@@ -103,19 +103,6 @@ const Rush = props => {
 								socials, date nights, mixers, and other aspects
 								of fraternity life.
 							</p>
-							/**<p>
-								<i>Will I get hazed?</i>
-								<br />
-								Absolutely not. Pi Kappa Phi has a strict no
-								hazing policy. None of us were hazed when we
-								were associate members and we will not haze you
-								in any way. We find that not hazing helps
-								strengthen the bonds between asscoiate member
-								classes. We do not want any resentment between
-								associate member classes due to hazing, and we
-								find many of our brothers' best friends are in
-								different years than themselves.
-							</p>**/
 							<p>
 								<i>
 									What is the time commitment associated with
