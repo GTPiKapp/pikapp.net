@@ -7,7 +7,7 @@ const imageData = [
 	{
 		title: 'PI KAPPA PHI',
 		description: 'IOTA CHAPTER',
-		src: '/images/carousel/slide_1.jpg',
+		src: '/images/carousel/slide_1new.JPG',
 		button: {
 			link: '/about/involvement',
 			title: 'LEARN MORE'
