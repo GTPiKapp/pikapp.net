@@ -79,8 +79,8 @@ const House = props => {
 							<Card style={{ width: '100%' }}>
 								<Image
 									src="james-moore.jpg"
-									title="James Moore, Head Chef"
-									caption="James Moore, Head Chef"
+									title="Robert Grimes, Head Chef"
+									caption="Robert Grimes, Head Chef"
 								/>
 							</Card>
 						</Col>
