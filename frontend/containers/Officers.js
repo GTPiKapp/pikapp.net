@@ -49,15 +49,15 @@ class Officers extends Component {
 								name="Dylan S. Fader"
 								hometown="Alpharetta, GA"
 								image="karan-achtani"
-								major="Business Finance"
+								major="Business Administration"
 								quote="Pi Kapp is a place of true brotherhood. It’s a place where I can be myself and hang out with friends who have a diverse range of interests. We are always there to support and push each other so that each of us can be the best man we can possibly be. It’s truly the best part of my college experience."
 							/>
 							<OfficerCard
 								position="Secretary"
 								name="Marcus S. Mudano"
-								hometown=", AL"
+								hometown="Birmingham, AL"
 								image="michael-shelton"
-								major="Business Administration"
+								major="Computer Engineering"
 								quote="Pi Kapp is a place that has changed my life and helped me grow in so many different ways. Making countless memories with this diverse brotherhood has made for a great college experience."
 							/>
 						</Row>
@@ -79,7 +79,7 @@ class Officers extends Component {
 								name="Nicholas C. Jones"
 								hometown="Rydal, GA"
 								image="koosha-kermani"
-								major="Biology"
+								major="Industrial Engineering"
 								quote="Being part of Pi Kappa Phi goes beyond just the organization, it means establishing and connecting with a brotherhood that is more important than oneself."
 							/>
 						</Row>
@@ -91,16 +91,16 @@ class Officers extends Component {
 							<OfficerCard
 								position="Chaplain"
 								name="Zachary L. Donald"
-								hometown="Cocoa Beach, FL"
+								hometown="Storrs, CT"
 								image="jarod-vogt"
-								major="Materials Science and Engineering"
+								major="Electrical Engineering"
 								quote="Growing up as any only child, Pi Kapp has provided me with the brothers I&#39;ve always wanted. Pi Kapp is all about building a brotherhood that connects people and allows them to achieve their goals."
 							/>
 							<OfficerCard
 								position="Risk Manager"
 								hideEmail
-								name="Jason L. Guo"
-								hometown="Tullahoma, TN"
+								name="Creighton P. Goerner"
+								hometown="Covington, GA"
 								image="jason-guo"
 								major="Industrial Engineering"
 								quote="As a brother of Pi Kapp, it has given me the core group of men that I can learn from and become life-long friends with. For all that Pi Kapp has given me, I hope that I could give back as much as Pi Kapp has given me."
@@ -114,27 +114,12 @@ class Officers extends Component {
 							<OfficerCard
 								position="Philanthropy Chair"
 								hideEmail
-								name="Ravi K. Sunder"
-								hometown="Lincolnshire, IL"
+								name="Brennan M. Pritchard"
+								hometown="Marietta, GA"
 								image="ravi-sunder"
-								major="Mechanical Engineering"
+								major="Industrial Engineering"
 								quote="Pi Kapp is a family that works together and helps each other, and is a place where we can all grow as people."
 							/>
-							<OfficerCard
-								position="Standards Chair"
-								hideEmail
-								name="Ashvin Warrier"
-								hometown="Cary, NC"
-								image="ashvin-warrier"
-								major="Computer Science"
-								quote="Pi Kapp to me is a place that connects us with strong and lasting bonds and that helps us grow as men. It’s a diverse place with regards to people’s backgrounds and personalities, which makes it a comfortable and supportive environment, like a second home here at Georgia Tech. My brothers have helped me in countless ways and we are all always here for each other, which is one of the defining characteristics of this brotherhood."
-							/>
-						</Row>
-						<Row
-							type="flex"
-							justify="space-around"
-							align="top"
-							style={{ marginTop: window.innerWidth < 800 ? 0 : 20 }}>
 							<OfficerCard
 								position="Chapter Advisor"
 								hideInformation
