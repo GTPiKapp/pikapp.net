@@ -49,21 +49,20 @@ class Navigation extends Component {
 							<Link to="/"><img src="/images/CoA.png" height="40"/><span style={{paddingLeft: '10px'}}>Pi Kappa Phi – Georgia Tech</span></Link>
 						</Item>
 						{/* Right-side navigation */}
-						<Item key="contact" style={{paddingTop: '10px', paddingBottom: '10px', float: 'right'}}>
-							<Link to="/contact">Contact Us</Link>
-						</Item>
-						{/*
 						<SubMenu title={(<Link id="alumni" onClick={this.navigationLinkClick} to="/alumni" style={{color: 'rgba(0, 0, 0, 0.65)', display: 'block', height: '100%'}}>Alumni</Link>)} style={{paddingTop: '10px', paddingBottom: '10px', float: 'right'}}>
-							<Item key="alumni/update">
-								<Link to="/alumni/update">Update Information</Link>
+							<Item key="alumni/donate">
+								<Link to="/alumni/donate">Donations</Link>
 							</Item>
-							<Item key="notable">
+							{/* <Item key="notable">
 								<Link to="/alumni/notable">Notable Alumni</Link>
-							</Item>
+							</Item> */}
 							<Item key="alumni/newsletters">
 								<Link to="/alumni/newsletters">Newsletters</Link>
 							</Item>
-						</SubMenu>*/}
+						</SubMenu>
+						<Item key="contact" style={{paddingTop: '10px', paddingBottom: '10px', float: 'right'}}>
+							<Link to="/contact">Contact Us</Link>
+						</Item>
 						<SubMenu title={(<Link id="house" onClick={this.navigationLinkClick} to="/house" style={{color: 'rgba(0, 0, 0, 0.65)', display: 'block', height: '100%'}}>House</Link>)} style={{paddingTop: '10px', paddingBottom: '10px', float: 'right'}}>
 							<Item key="house">
 								<Link to="/house">Our House</Link>

@@ -16,7 +16,7 @@ const imageData = [
 	{
 		title: 'Pi Kappa Phi',
 		description: 'Iota Chapter',
-		src: '/images/carousel/slide_2.jpg'
+		src: '/images/carousel/slide_2new.jpg'
 	},
 	{
 		title: 'Campus Involvement',
