@@ -7,7 +7,7 @@ import Helmet from 'react-helmet';
 
 import PageTitle from '../components/PageTitle';
 
-const Donations = props => {
+const Alumni = props => {
 	return (
 		<div>
 			<Helmet>
