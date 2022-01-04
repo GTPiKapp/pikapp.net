@@ -49,13 +49,13 @@ class Navigation extends Component {
 							<Link to="/"><img src="/images/CoA.png" height="40"/><span style={{paddingLeft: '10px'}}>Pi Kappa Phi – Georgia Tech</span></Link>
 						</Item>
 						{/* Right-side navigation */}
-						<SubMenu title={(<Link id="alumni" onClick={this.navigationLinkClick} to="/alumni" style={{color: 'rgba(0, 0, 0, 0.65)', display: 'block', height: '100%'}}>Alumni</Link>)} style={{paddingTop: '10px', paddingBottom: '10px', float: 'right'}}>
+						<SubMenu title={(<Link id="alumni" onClick={this.navigationLinkClick} to="/alumni/notable" style={{color: 'rgba(0, 0, 0, 0.65)', display: 'block', height: '100%'}}>Alumni</Link>)} style={{paddingTop: '10px', paddingBottom: '10px', float: 'right'}}>
 							<Item key="alumni">
 								<Link to="/alumni">Donations</Link>
 							</Item>
-							{/* <Item key="notable">
+							<Item key="notable">
 								<Link to="/alumni/notable">Notable Alumni</Link>
-							</Item> */}
+							</Item> 
 							<Item key="alumni/newsletters">
 								<Link to="/alumni/newsletters">Newsletters</Link>
 							</Item>
