@@ -24,7 +24,7 @@ const ParentMessage = props => {
 							<p>Joining Pi Kappa Phi Fraternity was one of the best decisions I have made in my college career. I have found men that share my ideals, interests, and goals. Please allow us to build your son into a better man while he enjoys the opportunity that is Pi Kappa Phi Fraternity.</p>
 							<p>Feel free to contact me or any of the <a href="/officers" title="Pi Kappa Phi Officers">officers</a> for any questions you may have about Pi Kappa Phi or fraternity life in general and the college experience.</p>
 							<p>Best Regards,</p>
-							<p>Patrick Miga<br/>
+							<p>Landon Schultz<br/>
 							President<br/>
 							Iota Chapter<br/>
 							Pi Kappa Phi Fraternity</p>
