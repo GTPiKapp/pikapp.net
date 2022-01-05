@@ -50,11 +50,11 @@ class Navigation extends Component {
 						</Item>
 						{/* Right-side navigation */}
 						<SubMenu title={(<Link id="alumni" onClick={this.navigationLinkClick} to="/alumni/notable" style={{color: 'rgba(0, 0, 0, 0.65)', display: 'block', height: '100%'}}>Alumni</Link>)} style={{paddingTop: '10px', paddingBottom: '10px', float: 'right'}}>
-							<Item key="alumni">
+							{/* <Item key="alumni">
 								<Link to="/alumni">Donations</Link>
-							</Item>
+							</Item> */}
 							<Item key="notable">
-								<Link to="/alumni/notable">Notable Alumni</Link>
+								<Link to="/alumni/notable">Donations</Link>
 							</Item> 
 							<Item key="alumni/newsletters">
 								<Link to="/alumni/newsletters">Newsletters</Link>

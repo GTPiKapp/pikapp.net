@@ -10,9 +10,9 @@ const NotableAlumni = props => {
 	return (
 		<div>
 			<Helmet>
-				<title>Pi Kappa Phi | Notable Alumni</title>
+				<title>Pi Kappa Phi | Alumni Donations</title>
 			</Helmet>
-			<PageTitle name="Notable Alumni"/>
+			<PageTitle name="Alumni Donations"/>
 		</div>
 	);
 }
